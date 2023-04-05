@@ -19,11 +19,14 @@ Output.innerHTML += `<p> La somma  è ${sum} </p>`;
 let checkIsOddorEven = checkiseverOrOdd(sum);
 
 
-console.log(stringValidate + ' ' + checkIsOddorEven);
+//console.log(stringValidate + ' ' + checkIsOddorEven);
 if(stringValidate != checkIsOddorEven){
-    console.log('hai perso')
+    Output.innerHTML +=`<h3>Mi dispiace hai perso!</h3>`
+    console.log('hai perso');
 }else{
-    console.log('hai vinto')
+    Output.innerHTML +=`<h3>Congratulazioni hai vinto!</h3>`
+
+    console.log('hai vinto');
 };
 
 
