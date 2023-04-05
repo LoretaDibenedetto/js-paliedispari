@@ -31,11 +31,13 @@ function validateIsNumber(variableString){
 
     // Qui sono sicuro che la mia stringa conterrà un numero
     let numero = parseInt(variableString);
+    randomNumberOutput.innerHTML += `<p> il numero scelto da te e': ${numero}<p>`
+
     return numero;
 };
 
 function randomNumber() {
     num = Math.round(Math.random() * 5);
     console.log('numero casuale '+ num);
-    randomNumberOutput.innerHTML = `<p> il numero generato dal computer e: ${num}<p>`;
+    randomNumberOutput.innerHTML += `<p> il numero generato dal computer e': ${num}<p>`;
 };
