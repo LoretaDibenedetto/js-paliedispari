@@ -8,8 +8,11 @@ const userNumber = prompt('scegli un numero da 1 a 5')
 let numberUser = validateIsNumber(userNumber);
 
 
-randomNumber();
+let randomNum = randomNumber();
 
+let sum = numberUser + randomNum;
+
+console.log(typeof(sum));
 
 
 
@@ -40,4 +43,5 @@ function randomNumber() {
     num = Math.round(Math.random() * 5);
     console.log('numero casuale '+ num);
     randomNumberOutput.innerHTML += `<p> il numero generato dal computer e': ${num}<p>`;
+    return num;
 };
