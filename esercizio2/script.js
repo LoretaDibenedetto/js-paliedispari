@@ -1,10 +1,10 @@
 //--------------------main---------------------------------
 const Output = document.getElementById('randomNumberOutput');
 const userEvenOrOdd = prompt('Scegli tra pari e dispari');
-validateIsOdd(userEvenOrOdd);
+let stringValidate = validateIsOdd(userEvenOrOdd);
 
 
-const userNumber = prompt('Scegli un numero da 1 a 5')
+const userNumber = prompt('Scegli un numero da 1 a 5');
 let numberUser = validateIsNumber(userNumber);
 
 
@@ -19,7 +19,12 @@ Output.innerHTML += `<p> La somma  è ${sum} </p>`;
 let checkIsOddorEven = checkiseverOrOdd(sum);
 
 
-console.log('ecco qua sto console.log di ' + checkIsOddorEven);
+console.log(stringValidate + ' ' + checkIsOddorEven);
+if(stringValidate != checkIsOddorEven){
+    console.log('hai perso')
+}else{
+    console.log('hai vinto')
+};
 
 
 
@@ -30,6 +35,7 @@ console.log('ecco qua sto console.log di ' + checkIsOddorEven);
 
 
 function validateIsOdd(string){
+
     if(string === 'pari'){
         console.log("Per l'utente  è pari")
         Output.innerHTML += `<p> Per l'utente  è pari <p>`
@@ -38,7 +44,7 @@ function validateIsOdd(string){
         Output.innerHTML += `<p> Per l'utente  è dispari <p>`
 
     };
-    //return string
+    return string;
 };
 
 
@@ -66,18 +72,19 @@ function randomNumber() {
 };
 
 function checkiseverOrOdd(number) {
+    let string = '';
     if(number % 2 == 0 ){
-
+        string = 'pari';
         console.log(" É pari");
-        Output.innerHTML += `<p>  É pari <p>`
+        Output.innerHTML += `<p>  É pari <p>`;
     }
     else{
-
+        string = 'dispari';
         console.log(" É dispari");
-        Output.innerHTML += `<p>  É dispari <p>`
+        Output.innerHTML += `<p>  É dispari <p>`;
     }
     
    
-  return number
+  return string;
 
 };
