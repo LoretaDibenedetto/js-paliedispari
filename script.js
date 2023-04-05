@@ -11,6 +11,14 @@ validateInputString(inputString);
 reverseString(inputString);
 
 
+//se inputstring e' uguale alla stringa al contrario
+if(inputString === reverseString(inputString)){
+    //stampo in console che e' palindromo 
+    console.log("e' palindromo");
+    //lo stampo nell'html
+    userInputResult.innerHTML = `<p> ${inputString} e' palindromo!`;
+};
+
 
 
 
@@ -54,12 +62,6 @@ function reverseString(str){
 
 
 };
-
-
-
-
-
-
 
 
 
