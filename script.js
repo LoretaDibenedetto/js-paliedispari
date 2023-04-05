@@ -17,6 +17,8 @@ if(inputString === reverseString(inputString)){
     console.log("e' palindromo");
     //lo stampo nell'html
     userInputResult.innerHTML = `<p> ${inputString} e' palindromo!`;
+}else{
+    userInputResult.innerHTML = `<p> ${inputString} non e' palindromo!`;
 };
 
 
@@ -53,7 +55,7 @@ function reverseString(str){
 
   
   // Step 3.  metodo join() per unire tutti gli elementi della stringa in un array
-  let joinArray = reverseArray.join("")
+  let joinArray = reverseArray.join("");
 
   
   //Step 4. Restituisci la stringa invertita
