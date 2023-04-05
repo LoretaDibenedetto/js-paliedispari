@@ -16,16 +16,31 @@ console.log(typeof(sum));
 Output.innerHTML += `<p> la somma e' ${sum} </p>`;
 
 
+checkiseverOrOdd(sum);
+
+
+
+
+
+
+
 //----------------------function--------------------------------
+
+
 
 function validateIsOdd(string){
     if(string === 'pari'){
         console.log("per l'utente e' pari")
+        Output.innerHTML += `<p> per l'utente e' pari <p>`
     }else if( string === 'dispari'){
-        console.log("per l'utente e' dispari")
+        console.log("per l'utente e' dispari");
+        Output.innerHTML += `<p> per l'utente e' dispari <p>`
+
     };
     //return string
 };
+
+
 
 function validateIsNumber(variableString){
     while(isNaN(variableString) || variableString == "" || variableString > 5){
@@ -39,9 +54,27 @@ function validateIsNumber(variableString){
     return numero;
 };
 
+
+
+
 function randomNumber() {
     num = Math.round(Math.random() * 5);
     console.log('numero casuale '+ num);
     Output.innerHTML += `<p> il numero generato dal computer e': ${num}<p>`;
     return num;
+};
+
+function checkiseverOrOdd(number) {
+    if(number % 2 == 0){
+        console.log("e' pari");
+        Output.innerHTML += `<p> e' pari <p>`
+    }else{
+
+        console.log("e' dispari");
+        Output.innerHTML += `<p> e' dispari <p>`
+    };
+    
+   
+
+
 };
