@@ -1,5 +1,5 @@
 //--------------------main---------------------------------
-const randomNumberOutput = document.getElementById('randomNumberOutput');
+const Output = document.getElementById('randomNumberOutput');
 const userEvenOrOdd = prompt('scegli tra pari e dispari');
 validateIsOdd(userEvenOrOdd);
 
@@ -13,7 +13,7 @@ let randomNum = randomNumber();
 let sum = numberUser + randomNum;
 
 console.log(typeof(sum));
-
+Output.innerHTML += `<p> la somma e' ${sum} </p>`;
 
 
 //----------------------function--------------------------------
@@ -34,7 +34,7 @@ function validateIsNumber(variableString){
 
     // Qui sono sicuro che la mia stringa conterrà un numero
     let numero = parseInt(variableString);
-    randomNumberOutput.innerHTML += `<p> il numero scelto da te e': ${numero}<p>`
+    Output.innerHTML += `<p> il numero scelto da te e': ${numero}<p>`
 
     return numero;
 };
@@ -42,6 +42,6 @@ function validateIsNumber(variableString){
 function randomNumber() {
     num = Math.round(Math.random() * 5);
     console.log('numero casuale '+ num);
-    randomNumberOutput.innerHTML += `<p> il numero generato dal computer e': ${num}<p>`;
+    Output.innerHTML += `<p> il numero generato dal computer e': ${num}<p>`;
     return num;
 };
