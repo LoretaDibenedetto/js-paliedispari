@@ -1,10 +1,10 @@
 //--------------------main---------------------------------
 const Output = document.getElementById('randomNumberOutput');
-const userEvenOrOdd = prompt('scegli tra pari e dispari');
+const userEvenOrOdd = prompt('Scegli tra pari e dispari');
 validateIsOdd(userEvenOrOdd);
 
 
-const userNumber = prompt('scegli un numero da 1 a 5')
+const userNumber = prompt('Scegli un numero da 1 a 5')
 let numberUser = validateIsNumber(userNumber);
 
 
@@ -13,12 +13,13 @@ let randomNum = randomNumber();
 let sum = numberUser + randomNum;
 
 console.log(typeof(sum));
-Output.innerHTML += `<p> la somma e' ${sum} </p>`;
+Output.innerHTML += `<p> La somma  è ${sum} </p>`;
 
 
-checkiseverOrOdd(sum);
+let checkIsOddorEven = checkiseverOrOdd(sum);
 
 
+console.log('ecco qua sto console.log di ' + checkIsOddorEven);
 
 
 
@@ -30,11 +31,11 @@ checkiseverOrOdd(sum);
 
 function validateIsOdd(string){
     if(string === 'pari'){
-        console.log("per l'utente e' pari")
-        Output.innerHTML += `<p> per l'utente e' pari <p>`
+        console.log("Per l'utente  è pari")
+        Output.innerHTML += `<p> Per l'utente  è pari <p>`
     }else if( string === 'dispari'){
-        console.log("per l'utente e' dispari");
-        Output.innerHTML += `<p> per l'utente e' dispari <p>`
+        console.log("Per l'utente  è dispari");
+        Output.innerHTML += `<p> Per l'utente  è dispari <p>`
 
     };
     //return string
@@ -49,7 +50,7 @@ function validateIsNumber(variableString){
 
     // Qui sono sicuro che la mia stringa conterrà un numero
     let numero = parseInt(variableString);
-    Output.innerHTML += `<p> il numero scelto da te e': ${numero}<p>`
+    Output.innerHTML += `<p> Il numero scelto da te  è: ${numero}<p>`
 
     return numero;
 };
@@ -60,21 +61,23 @@ function validateIsNumber(variableString){
 function randomNumber() {
     num = Math.round(Math.random() * 5);
     console.log('numero casuale '+ num);
-    Output.innerHTML += `<p> il numero generato dal computer e': ${num}<p>`;
+    Output.innerHTML += `<p> Il numero generato dal computer  è: ${num}<p>`;
     return num;
 };
 
 function checkiseverOrOdd(number) {
-    if(number % 2 == 0){
-        console.log("e' pari");
-        Output.innerHTML += `<p> e' pari <p>`
-    }else{
+    if(number % 2 == 0 ){
 
-        console.log("e' dispari");
-        Output.innerHTML += `<p> e' dispari <p>`
-    };
+        console.log(" É pari");
+        Output.innerHTML += `<p>  É pari <p>`
+    }
+    else{
+
+        console.log(" É dispari");
+        Output.innerHTML += `<p>  É dispari <p>`
+    }
     
    
-
+  return number
 
 };
